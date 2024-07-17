@@ -1,0 +1,48 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+void filter(int num);
+
+int main() {
+	//---------
+	int num = 0;
+	int* arr = (int*)malloc(sizeof(int)*100);
+
+	printf("숫자 입력 : ");
+	scanf("%d", &num);
+
+	//---------
+	filter(num, arr);
+
+	//---------
+	for (int i = 0; i < num; i++) {
+		if (*(arr + i) != 0) {
+			printf("%d\n", *(arr + i));
+		}
+	}
+
+	free(arr);
+}
+
+void filter(int num, int *arr) {
+	for (int i = 0; i < num; i++) {
+		*(arr + i) = i;
+	}
+
+	for (int i = 0; i < num; i++) {
+		if (i % 2 == 0 && i != 2) {
+			*(arr + i) = 0;
+		}
+		if (i % 3 == 0 && i != 3) {
+			*(arr + i) = 0;
+		}
+		if (i % 5 == 0 && i != 5) {
+			arr[i] = 0;
+		}
+		if (i % 7 == 0 && i != 7) {
+			*(arr + i) = 0;
+		}
+	}
+}
+
