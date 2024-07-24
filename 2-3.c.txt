@@ -7,7 +7,7 @@ int main() {
 	char input[1001];
 	char** arr = (char**)malloc(sizeof(char*) * 10);
 
-	//--------- 문자 입력받아 저장
+	//--------- 문자 입력 & 저장
 	for (int i = 0; i < 10; i++) {
 		gets(input);
 		int size = strlen(input) + 1;   //마지막 NULL문자 때문에 +1
