@@ -1,0 +1,50 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	//--------- 배열 생성
+	int size = 0;
+	printf("배열 크기 입력 : ");
+	scanf("%d", &size);
+
+	int** arr = (int**)malloc(sizeof(int*) * size);
+	int** arrcpy = (int**)malloc(sizeof(int*) * size);
+
+	for (int i = 0; i < size; i++) {
+		arr[i] = (int*)malloc(sizeof(int) * size);
+		arrcpy[i] = (int*)malloc(sizeof(int) * size);
+	}
+
+	//--------- 값 입력
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			scanf("%d", &arr[i][j]);
+		}
+	}
+	printf("\n\n");
+
+	//--------- 회전
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			*(*(arrcpy + (size - j - 1)) + i) = *(*(arr + i) + j);
+		}
+	}
+
+	//--------- 출력
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			printf("%d ", *(*(arrcpy + i) + j));
+		}
+		printf("\n");
+	}
+
+	//--------- 메모리 할당 해제
+	for (int i = 0; i < size; i++) {
+		free(arr[i]);
+		free(arrcpy[i]);
+	}
+
+	free(arr);
+	free(arrcpy);
+}
