@@ -3,12 +3,12 @@
 #include<string.h>
 
 int main() {
-	char* str[10];
+	char** str = (char**)malloc(sizeof(char*) * 10);
 	for (int i = 0; i < 10; i++)
 	{
 		char tmp[100];
 		scanf("%s", tmp);
-		str[i] = (char*)malloc(sizeof(char) * strlen(tmp));
+		str[i] = (char*)malloc(sizeof(char) * strlen(tmp) + 1);
 		strcpy(str[i], tmp);
 	}
 	for (int i = 0; i < 10; i++)
@@ -31,6 +31,9 @@ int main() {
 	}
 	for (int i = 0; i < 10; i++)
 	{
-		free(str[i]);
+		free(*(str+i));
 	}
+	free(str);
+
+	return 0;
 }
