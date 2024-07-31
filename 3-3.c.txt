@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+void A2R(int num);
+
+int main() {
+    int num;
+
+    printf("Arabic number : ");
+    scanf("%d", &num);
+
+    A2R(num);   // Arabic To Roman
+
+    return 0;
+}
+
+void A2R(int num) {
+    int arabic[] = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+    char* roman[] = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+    int i = 0;
+
+    while (num > 0) {
+        while (num >= arabic[i]) {     //num과 비슷한 숫자 찾음
+            printf("%s", roman[i]);
+            num -= arabic[i];
+        }
+        i++;
+    }
+}
