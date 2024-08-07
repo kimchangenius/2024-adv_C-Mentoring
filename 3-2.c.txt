@@ -1,0 +1,67 @@
+/*
+strlen / strcmp / strcat 구현
+*/
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int ssaje_strlen(char* arr1);
+int ssaje_strcmp(char* arr1, char* arr2);
+void ssaje_strcpy(char* arr1, char* arr2);
+void ssaje_strcat(char* arr1, char* arr2);
+
+int main() {
+	char arr1[50] = { '\0' }, arr2[50] = { '\0' };
+
+	printf("arr1 : ");
+	gets(arr1);
+	printf("arr2 : ");
+	gets(arr2);
+
+	int len = ssaje_strlen(arr1);
+	printf("\narr1 길이 : %d\n", len);
+	len = ssaje_strlen(arr2);
+	printf("arr2 길이 : %d\n", len);
+
+	int cmp = ssaje_strcmp(arr1, arr2);
+	printf("\n비교값 : %d     (0 : 같음, 1 : 다름)\n", cmp);
+
+	ssaje_strcat(arr1, arr2);
+	printf("\narr1 + arr2 : %s\n", arr1);
+
+	ssaje_strcpy(arr1, arr2);
+	printf("\narr1 <- arr2 : %s\n", arr1);
+}
+
+int ssaje_strlen(char* arr1) {
+	int len = 0;
+	for (len = 0; arr1[len] != '\0'; len++);  //문자열이 끝날 때 가지 +1
+
+	return len;
+}
+
+int ssaje_strcmp(char* arr1, char* arr2) {
+	int n = 0;
+
+	for (int i = 0; arr1[i] != '\0'; i++) {
+		if (arr1[i] != arr2[i]) {
+			return 1;
+		}
+	}
+
+	return n;
+}
+
+void ssaje_strcat(char* arr1, char* arr2) {
+	int i = 0;
+	int len = ssaje_strlen(arr1);
+
+	for (len, i = 0; arr2[i] != '\0'; len++, i++) {
+		arr1[len + i] = arr2[i];
+	}
+}
+
+void ssaje_strcpy(char* arr1, char* arr2) {
+	for (int i = 0; arr1[i] != '\0'; i++) {
+		arr2[i] = arr1[i];
+	}
+}

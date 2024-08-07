@@ -1,0 +1,43 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+	char input[1001];
+	char** arr = (char**)malloc(sizeof(char*) * 10);
+
+	//--------- 문자 입력 & 저장
+	for (int i = 0; i < 10; i++) {
+		gets(input);
+		int size = strlen(input) + 1;   //마지막 NULL문자 때문에 +1
+
+		arr[i] = (char*)malloc(sizeof(char) * size);
+		strcpy(arr[i], input);
+	}
+
+	//--------- 정렬
+	for (int i = 0; i < 9; i++) {
+		if ((int)arr[i][0] > (int)arr[i + 1][0]) {
+			char* swap = (char*)malloc(sizeof(strlen(arr[i])) + 1);
+			strcpy(swap, arr[i]);
+			
+			arr[i] = (char*)realloc(arr[i], sizeof(strlen(arr[i + 1])));
+			strcpy(arr[i], arr[i+1]);
+
+			arr[i + 1] = (char*)realloc(arr[i+1], sizeof(strlen(swap)));
+			strcpy(arr[i + 1], swap);
+		}
+	}
+
+	printf("\n");
+	for (int i = 0; i < 10; i++) {
+		puts(arr[i]);
+	}
+
+	//--------- 메모리 해제
+	for (int i = 0; i < 10; i++) {
+		free(arr[i]);
+	}
+	free(arr);
+}
