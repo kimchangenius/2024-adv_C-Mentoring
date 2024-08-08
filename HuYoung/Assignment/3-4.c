@@ -11,7 +11,7 @@ void str_swap(char* p1, char* p2) {
 }
 
 int main() {
-	char *input; // 임시 저장하는 문자열을 정적할당하면 arr에 저장되는 문자열이 다 같아지는 오류가 생김 (input[101] 처럼)
+	char *input; // 임시 저장하는 문자열을 정적할당하면(input[101] 처럼) arr에 저장되는 문자열이 다 같아지는 오류가 생김
 	char** arr = (char**)malloc(sizeof(char*) * 1);
 	int arr_idx = 0;
 

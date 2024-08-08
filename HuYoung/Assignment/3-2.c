@@ -26,7 +26,7 @@ int main() {
 
 int my_strlen(char* arr1) {
 	int len = 0;
-	for (int i = 0; arr1[i] != '\0'; i++) {
+	for (int i = 0; arr1[i] != '\0'; i++) { // 널문자를 만나기 전까지 반복 (실질적인 문자열의 길이)
 		len++;
 	}
 	return len;
@@ -35,13 +35,13 @@ int my_strlen(char* arr1) {
 int my_strcmp(char* arr1, char* arr2) {
 	int len1 = my_strlen(arr1);
 	int len2 = my_strlen(arr2);
-	if (len1 > len2) {
+	if (len1 > len2) { // 문장의 길이가 더 길면 크기가 더 크므로 1을 반환
 		return 1;
 	}
-	else if (len1 < len2) {
+	else if (len1 < len2) { // 반대로 -1을 반환
 		return -1;
 	}
-	else {
+	else { // 갈이가 같으면 각 문자열의 문자를 하나하나 비교해서 다를때 1 or -1을 반환
 		for (int i = 0; i < len1; i++) {
 			if (arr1[i] != arr2[i]) {
 				if (arr1[i] > arr2[i]) {
@@ -53,13 +53,13 @@ int my_strcmp(char* arr1, char* arr2) {
 			}
 		}
 	}
-	return 0;
+	return 0; // 아무것도 해당하지 않으면 두 문자열이 같다는 0을 반환
 }
 
 void my_strcpy(char* arr1, char* arr2) {
 	int len2 = my_strlen(arr2);
 	int i;
-	for (i = 0; i < len2; i++) {
+	for (i = 0; i < len2; i++) { // arr1의 길이와는 상관없으므로(크기는 같을때) len2의 문자를 하나하나 복사함
 		arr1[i] = arr2[i];
 	}
 	arr1[i] = '\0';
@@ -70,7 +70,7 @@ void my_strcat(char* arr1, char* arr2) {
 	int len2 = my_strlen(arr2);
 	int i;
 	for (i = 0; i < len2; i++) {
-		arr1[len1 + i] = arr2[i];
+		arr1[len1 + i] = arr2[i]; // arr1의 길이 뒤에 arr2의 문자를 하나하나 복사함
 	}
 	arr1[len1 + i] = '\0';
 }

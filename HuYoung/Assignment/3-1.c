@@ -69,7 +69,7 @@ int main() {
 			colon_cnt++;
 		}
 
-		else if (ch == '\n' || ch == EOF) {
+		else if (ch == '\n' || ch == EOF) { // 각 줄의 마지막 문자인 \n이거나 파일의 끝인 EOF일 때 다음 줄로 넘어가기 전 과정
 			input[word_len] = '\0'; // 점수용 널문자
 			if (colon_cnt == 3) { // 점수
 				if (subject_idx == 0) { // Math

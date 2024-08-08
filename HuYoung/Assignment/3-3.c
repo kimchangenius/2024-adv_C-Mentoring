@@ -35,7 +35,7 @@ char* rome_num_transform(int num) { // 입력된 수(1000 이하)를 로마 숫자로 변환하
 	char rome_num[5];
 	int div, remain;
 	if (num == 1000) {
-		return "M";
+		return "M"; // 문제에는 별도의 내용이 없어서 따로 예외처리함
 	}
 	for (int k = 0; k < 6; k++) {
 		if (num == expt_i[k]) { // 9나 4가 들어간 수 예외 처리
