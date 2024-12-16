@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\re_coder_yoo\\2024-adv_C-Mentoring\\Gicheol\\Project1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E12287B3-F89E-4879-AE41-309EC5164C98}|Project1.vcxproj|C:\\re_coder_yoo\\2024-adv_C-Mentoring\\Gicheol\\Project1\\2-3.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E12287B3-F89E-4879-AE41-309EC5164C98}|Project1.vcxproj|solutionrelative:2-3.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12287B3-F89E-4879-AE41-309EC5164C98}|Project1.vcxproj|C:\\re_coder_yoo\\2024-adv_C-Mentoring\\Gicheol\\Project1\\2-2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E12287B3-F89E-4879-AE41-309EC5164C98}|Project1.vcxproj|solutionrelative:2-2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E12287B3-F89E-4879-AE41-309EC5164C98}|Project1.vcxproj|C:\\re_coder_yoo\\2024-adv_C-Mentoring\\Gicheol\\Project1\\2-1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E12287B3-F89E-4879-AE41-309EC5164C98}|Project1.vcxproj|solutionrelative:2-1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "2-3.c",
+              "DocumentMoniker": "C:\\re_coder_yoo\\2024-adv_C-Mentoring\\Gicheol\\Project1\\2-3.c",
+              "RelativeDocumentMoniker": "2-3.c",
+              "ToolTip": "C:\\re_coder_yoo\\2024-adv_C-Mentoring\\Gicheol\\Project1\\2-3.c",
+              "RelativeToolTip": "2-3.c",
+              "ViewState": "AQIAACoAAAAAAAAAAAAUwDAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-07-21T13:17:49.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "2-2.c",
+              "DocumentMoniker": "C:\\re_coder_yoo\\2024-adv_C-Mentoring\\Gicheol\\Project1\\2-2.c",
+              "RelativeDocumentMoniker": "2-2.c",
+              "ToolTip": "C:\\re_coder_yoo\\2024-adv_C-Mentoring\\Gicheol\\Project1\\2-2.c",
+              "RelativeToolTip": "2-2.c",
+              "ViewState": "AQIAACYAAAAAAAAAAAAUwCwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-07-21T13:17:41.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "2-1.c",
+              "DocumentMoniker": "C:\\re_coder_yoo\\2024-adv_C-Mentoring\\Gicheol\\Project1\\2-1.c",
+              "RelativeDocumentMoniker": "2-1.c",
+              "ToolTip": "C:\\re_coder_yoo\\2024-adv_C-Mentoring\\Gicheol\\Project1\\2-1.c",
+              "RelativeToolTip": "2-1.c",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAUwBUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-07-21T13:17:31.684Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
